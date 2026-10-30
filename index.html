@@ -1,0 +1,665 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <title>ОМВД-П | Полицейский портал</title>
+
+    <link rel="icon" type="image/x-icon" href="images/favicon.ico">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <!-- PRELOADER -->
+    <div class="preloader" id="preloader">
+        <div class="preloader-shield">
+            <i class="fas fa-shield-alt"></i>
+            <div class="preloader-ring"></div>
+        </div>
+        <p class="preloader-text">Загрузка портала...</p>
+    </div>
+
+    <!-- HEADER -->
+    <header class="site-header" id="siteHeader">
+        <div class="header-inner">
+            <div class="logo-area">
+                <div class="logo-icon"><i class="fas fa-shield-alt"></i></div>
+                <div class="logo-text">
+                    <h1>ОМВД-П</h1>
+                    <p>Полицейский портал</p>
+                </div>
+            </div>
+
+            <nav class="header-nav" id="headerNav">
+    <a href="#binds" class="nav-link active" data-target="binds"><i class="fas fa-keyboard"></i> Бинды</a>
+    <a href="#pdp" class="nav-link" data-target="pdp"><i class="fas fa-first-aid"></i> ПДП</a>
+    <a href="#info" class="nav-link" data-target="info"><i class="fas fa-info-circle"></i> Инфо</a>
+
+    <div class="nav-dropdown" id="navDropdown">
+        <button class="nav-link nav-dropdown-toggle" id="navDropdownToggle">
+            <i class="fas fa-book"></i> База знаний <i class="fas fa-chevron-down nav-dropdown-arrow"></i>
+        </button>
+        <div class="nav-dropdown-menu" id="navDropdownMenu">
+            <a href="#law" class="nav-dropdown-item" data-target="law">
+                <i class="fas fa-gavel"></i>
+                <div>
+                    <span>Законодательство</span>
+                    <small>УК, КоАП, ФЗоП, ПДД</small>
+                </div>
+            </a>
+            <a href="#orders" class="nav-dropdown-item disabled" data-target="orders">
+                <i class="fas fa-scroll"></i>
+                <div>
+                    <span>Приказы МВД <span class="badge-soon">Скоро</span></span>
+                    <small>Внутренние приказы и регламенты</small>
+                </div>
+            </a>
+                        <a href="#vps" class="nav-dropdown-item" data-target="vps">
+                <i class="fas fa-shield-halved"></i>
+                <div>
+                    <span>ВПС</span>
+                    <small>Внутренние правила сервера</small>
+                </div>
+            </a>
+            <a href="#helpers" class="nav-dropdown-item disabled" data-target="helpers">
+                <i class="fas fa-graduation-cap"></i>
+                <div>
+                    <span>Вспомогательные отыгровки <span class="badge-soon">Скоро</span></span>
+                    <small>Для новичков и помощь от сливщиков</small>
+                </div>
+            </a>
+        </div>
+    </div>
+
+    <a href="#updates" class="nav-link" data-target="updates"><i class="fas fa-newspaper"></i> Обновления <span class="badge-new" id="badgeUpdates">NEW</span></a>
+</nav>
+
+            <div class="header-right">
+                <div class="status-pill"><span class="dot"></span> Портал активен</div>
+                <button class="menu-toggle" id="menuToggle" aria-label="Меню"><i class="fas fa-bars"></i></button>
+            </div>
+        </div>
+    </header>
+
+    <!-- HERO -->
+    <section class="hero" id="hero">
+        <div class="hero-bg"></div>
+        <div class="hero-overlay"></div>
+        <div class="hero-particles" id="heroParticles"></div>
+        <div class="hero-content">
+            <div class="hero-badge"><i class="fas fa-circle-notch"></i> Официальный портал · 1 сервер</div>
+            <h2 class="hero-title">
+                <span class="hero-title-line">Служебный портал</span>
+                <span class="hero-title-accent">ОМВД-П</span>
+            </h2>
+            <p class="hero-subtitle">Бинды, первая помощь и информационный стенд — всё в одном месте. Быстро. Удобно. Всегда под рукой.</p>
+            <div class="hero-actions">
+                <a href="#binds" class="btn btn-primary" data-scroll="binds"><i class="fas fa-keyboard"></i> Перейти к биндам</a>
+                <a href="#updates" class="btn btn-ghost" data-scroll="updates"><i class="fas fa-newspaper"></i> Что нового?</a>
+            </div>
+            <div class="hero-stats">
+                <div class="hero-stat"><div class="hero-stat-num">4</div><div class="hero-stat-label">Отдела</div></div>
+                <div class="hero-stat"><div class="hero-stat-num">50+</div><div class="hero-stat-label">Биндов</div></div>
+                <div class="hero-stat"><div class="hero-stat-num">6</div><div class="hero-stat-label">Кодексов</div></div>
+            </div>
+        </div>
+        <div class="hero-scroll-hint"><i class="fas fa-chevron-down"></i></div>
+    </section>
+
+    <!-- SECTION CARDS -->
+    <section class="section-cards" id="sectionCards">
+        <div class="section-card" data-target="binds">
+            <div class="section-card-bg" style="background-image: url('images/card-binds.jpg');"></div>
+            <div class="section-card-overlay"></div>
+            <div class="section-card-content">
+                <div class="section-card-icon"><i class="fas fa-keyboard"></i></div>
+                <h3>Бинды</h3>
+                <p>Готовые бинды для отыгровок — Академия, ППСП, ОУР, СОБР</p>
+                <div class="section-card-arrow"><i class="fas fa-arrow-right"></i></div>
+            </div>
+        </div>
+
+        <div class="section-card" data-target="pdp">
+            <div class="section-card-bg" style="background-image: url('images/card-pdp.jpg');"></div>
+            <div class="section-card-overlay"></div>
+            <div class="section-card-content">
+                <div class="section-card-icon"><i class="fas fa-first-aid"></i></div>
+                <h3>ПДП</h3>
+                <p>Первая доврачебная помощь — пошаговые отыгровки</p>
+                <div class="section-card-arrow"><i class="fas fa-arrow-right"></i></div>
+            </div>
+        </div>
+
+        <div class="section-card" data-target="info">
+            <div class="section-card-bg" style="background-image: url('images/card-info.jpg');"></div>
+            <div class="section-card-overlay"></div>
+            <div class="section-card-content">
+                <div class="section-card-icon"><i class="fas fa-info-circle"></i></div>
+                <h3>Инфо стенд</h3>
+                <p>График работы, экипировка, комплектации отделов</p>
+                <div class="section-card-arrow"><i class="fas fa-arrow-right"></i></div>
+            </div>
+        </div>
+
+        <div class="section-card" data-target="updates">
+            <div class="section-card-bg" style="background-image: url('images/card-updates.jpg');"></div>
+            <div class="section-card-overlay"></div>
+            <div class="section-card-content">
+                <div class="section-card-icon"><i class="fas fa-newspaper"></i></div>
+                <h3>Обновления</h3>
+                <p>Все изменения портала и обратная связь с разработчиком</p>
+                <div class="section-card-arrow"><i class="fas fa-arrow-right"></i></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- MAIN -->
+    <main class="main-layout">
+        <div class="content-wrapper" id="contentWrapper">
+
+            <!-- PERSONAL DATA -->
+            <div class="personal-data-global reveal">
+                <h3><i class="fas fa-user-astronaut"></i> Личные данные сотрудника</h3>
+                <div class="data-form">
+                    <div class="form-group"><label>Звание</label><input type="text" id="rank" placeholder="Лейтенант"></div>
+                    <div class="form-group"><label>Фамилия</label><input type="text" id="lastname" placeholder="Иванов"></div>
+                    <div class="form-group"><label>Должность</label><input type="text" id="position" placeholder="Инструктор"></div>
+                    <div class="form-group"><label>Позывной</label><input type="text" id="callsign" placeholder="Хрюндель"></div>
+                    <div class="form-group"><label>Позывной напарника</label><input type="text" id="partnerCallsign" placeholder="Кинжал"></div>
+                    <div class="form-group"><label>Служба</label>
+                        <select id="service">
+                            <option value="полиции">полиции</option>
+                            <option value="юстиции">юстиции</option>
+                            <option value="внутренней службы">внутренней службы</option>
+                        </select>
+                    </div>
+                    <button class="update-btn" id="updateDataBtn"><i class="fas fa-save"></i> Сохранить данные</button>
+                </div>
+                <div class="hint-text"><i class="fas fa-info-circle"></i> Данные подставляются в бинды автоматически. <code>[key]</code> замените на нужную клавишу.</div>
+            </div>
+
+            <!-- BINDS -->
+            <section id="bindsContent" class="tab-pane active">
+                <div class="content-header reveal">
+                    <h2><i class="fas fa-keyboard"></i> Бинды для отыгровки</h2>
+                </div>
+                <div class="dept-tabs reveal">
+                    <button class="dept-card active" data-dept="academy"><i class="fas fa-graduation-cap"></i> Академия МВД</button>
+                    <button class="dept-card" data-dept="ppsp"><i class="fas fa-shield-alt"></i> ОР ППСП</button>
+                    <button class="dept-card" data-dept="ur"><i class="fas fa-search"></i> ОУР</button>
+                    <button class="dept-card" data-dept="sobr"><i class="fas fa-skull-crossbones"></i> СОБР «Рысь»</button>
+                </div>
+                <div id="bindsContainer" class="binds-container"></div>
+                <p class="footnote"><i class="fas fa-info-circle"></i> Нажмите на заголовок категории, чтобы развернуть. Кнопка «Копировать» — копирует бинд в буфер.</p>
+            </section>
+
+                        <!-- PDP -->
+            <section id="pdpContent" class="tab-pane">
+                <div class="content-header reveal">
+                    <h2><i class="fas fa-first-aid"></i> Первая доврачебная помощь</h2>
+                </div>
+
+                <!-- Подготовка -->
+                <div class="pdp-prep reveal">
+                    <div class="pdp-prep-header">
+                        <i class="fas fa-briefcase-medical"></i>
+                        <h3>Подготовка к ПДП</h3>
+                    </div>
+                    <div class="pdp-prep-steps">
+                        <div class="pdp-step">
+                            <span class="step-num">1</span>
+                            <div class="step-content">
+                                <p>Спросите у пострадавшего согласие в OOC чат: <strong>«РП или болька?»</strong></p>
+                            </div>
+                        </div>
+                        <div class="pdp-step">
+                            <span class="step-num">2</span>
+                            <div class="step-content">
+                                <p>Подойдите к багажнику ПА и отыграйте:</p>
+                                <div class="bind-commands">do В багажнике патрульного автомобиля находится аптечка.
+me взял из багажника аптечку
+me положил аптечку на землю, затем вскрыл лямку с аптечки</div>
+                                 
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Определение состояния -->
+                <div class="pdp-prep reveal">
+                    <div class="pdp-prep-header">
+                        <i class="fas fa-stethoscope"></i>
+                        <h3>Определение состояния</h3>
+                    </div>
+                    <div class="pdp-prep-steps">
+                        <div class="pdp-step">
+                            <span class="step-num">1</span>
+                            <div class="step-content">
+                                <p>Осмотр на наличие травм:</p>
+                                <div class="bind-commands" id="pdp-prep-2">me осмотрел пострадавшего на наличие видимых травм и кровотечений
+do Есть ли повреждения на теле пострадавшего? Если есть, то какие?</div>
+                                 
+                            </div>
+                        </div>
+                        <div class="pdp-step">
+                            <span class="step-num">2</span>
+                            <div class="step-content">
+                                <p>Проверка пульса и дыхания:</p>
+                                <div class="bind-commands" id="pdp-prep-3">me приложил два пальца к сонной артерии пострадавшего для проверки пульса
+do У пострадавшего есть пульс?
+me запрокинув голову пострадавшего, нагнулся к ней для проверки дыхания
+do У пострадавшего есть дыхание?</div>
+                                 
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <h3 class="pdp-title reveal"><i class="fas fa-notes-medical"></i> Оказание помощи по ситуациям</h3>
+                
+                <!-- Сетка травм -->
+                <div id="pdpContainer" class="pdp-grid"></div>
+
+                <!-- Завершение -->
+                <div class="pdp-prep reveal" style="margin-top: 24px;">
+                    <div class="pdp-prep-header">
+                        <i class="fas fa-check-circle"></i>
+                        <h3>Завершение ПДП</h3>
+                    </div>
+                    <div class="pdp-prep-steps">
+                        <div class="pdp-step">
+                            <span class="step-num">1</span>
+                            <div class="step-content">
+                                <p>Верните аптечку в багажник:</p>
+                                <div class="bind-commands" id="pdp-end-1">me застегнул лямку с аптечки, затем взял её
+me положил аптечку в багажник</div> 
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </section>
+
+             <!-- INFO -->
+            <section id="infoContent" class="tab-pane">
+                <div class="content-header reveal">
+                    <h2><i class="fas fa-info-circle"></i> Информационный стенд</h2>
+                </div>
+
+                <!-- 1. ГРАФИК -->
+                <div class="info-block reveal">
+                    <h3 class="block-title"><i class="fas fa-clock"></i> Рабочий график</h3>
+                    <div class="schedule-grid">
+                        <div class="schedule-item">
+                            <span class="schedule-day">Понедельник – Пятница</span>
+                            <span class="schedule-time">09:00 – 18:00</span>
+                        </div>
+                        <div class="schedule-item">
+                            <span class="schedule-day">Суббота</span>
+                            <span class="schedule-time">10:00 – 17:00</span>
+                        </div>
+                        <div class="schedule-item highlight">
+                            <span class="schedule-day">Воскресенье</span>
+                            <span class="schedule-time">Выходной (при отсутствии ДВ)</span>
+                        </div>
+                        <div class="schedule-item lunch">
+                            <span class="schedule-day">Обеденный перерыв</span>
+                            <span class="schedule-time">14:00 – 15:00</span>
+                        </div>
+                    </div>
+                    <div class="info-alert">
+                        <i class="fas fa-exclamation-triangle"></i>
+                        <div>
+                            <p>Если выходной день объявляется рабочим, сотрудник обязан работать в этот день с 09:00 до 18:00.</p>
+                            <p>Весь личный состав может быть привлечен к исполнению обязанностей в нерабочее время при необходимости.</p>
+                            <p>Прием вызовов и заявлений осуществляется круглосуточно.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 2. ЭКИПИРОВКА -->
+                <div class="info-block reveal">
+                    <h3 class="block-title"><i class="fas fa-vest"></i> Экипировка</h3>
+                    <div class="equip-grid">
+                        <div class="equip-card">
+                            <div class="equip-icon"><i class="fas fa-shield-alt"></i></div>
+                            <h4>Средства защиты</h4>
+                            <ul>
+                                <li>Бронежилет «КОРА-1М» <span>(всем)</span></li>
+                            </ul>
+                        </div>
+                        <div class="equip-card">
+                            <div class="equip-icon"><i class="fas fa-hand-rock"></i></div>
+                            <h4>Спецсредства</h4>
+                            <ul>
+                                <li>Палка резиновая ПУС-2 <span>(всем)</span></li>
+                                <li>Электрошокер «Taser» <span>(всем)</span></li>
+                                <li>Наручники «БР-2М» <span>(всем)</span></li>
+                            </ul>
+                        </div>
+                        <div class="equip-card">
+                            <div class="equip-icon"><i class="fas fa-gun"></i></div>
+                            <h4>Огнестрельное оружие</h4>
+                            <ul>
+                                <li>Пистолет «Грач» <span>(ст. Сержант)</span></li>
+                                <li>Винтовка «АК-74М» <span>(Лейтенант)</span></li>
+                                <li>Ружьё «МР-133» <span>(Лейтенант)</span></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <h4 class="sub-title">Комплектации по отделам</h4>
+                    <div class="dept-equip-grid">
+                        <div class="dept-equip-item">
+                            <strong>ОР ППСП и ИК АМВД</strong>
+                            <span>Грач, АК-74М, ПУС-2, Taser, БР-2М, КОРА-1М</span>
+                        </div>
+                        <div class="dept-equip-item">
+                            <strong>СОБР «Рысь»</strong>
+                            <span>Грач, АК-74М, БР-2М, Taser, ПУС-2, КОРА-1М</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 3. СТАЦИОНАРНЫЕ ПОСТЫ -->
+                <div class="info-block reveal">
+                    <h3 class="block-title"><i class="fas fa-map-marker-alt"></i> Стационарные посты</h3>
+                    <div class="btn-map-wrapper">
+                        <button class="btn-map" onclick="openImageModal('images/map-posts.jpg')">
+                            <i class="fas fa-map"></i> Открыть карту постов
+                        </button>
+                    </div>
+                    <div class="posts-grid">
+                        <div class="post-item"><span>СП-1</span> Дежурная часть (вестибюль)</div>
+                        <div class="post-item"><span>СП-2</span> КПП-1/2 (проход на парковку)</div>
+                        <div class="post-item"><span>СП-3</span> ЖД вокзал (площадь)</div>
+                        <div class="post-item"><span>СП-4</span> АТП №1 (двор)</div>
+                        <div class="post-item"><span>СП-5</span> ЖТУ (парковка)</div>
+                        <div class="post-item"><span>СП-6</span> ЦГБ-П (парковка)</div>
+                        <div class="post-item"><span>СП-7</span> Завод ЖБК (парковка)</div>
+                        <div class="post-item"><span>СП-8</span> Стадион (парковка)</div>
+                        <div class="post-item"><span>СП-9</span> ТРЦ Лента (парковка)</div>
+                        <div class="post-item"><span>СП-10</span> Аэропорт Угрюмоч (вход)</div>
+                        <div class="post-item"><span>СП-11</span> Гоночный трек</div>
+                        <div class="post-item"><span>СП-12</span> Деревня Перевалово</div>
+                    </div>
+                </div>
+
+                <!-- 4. АВТОПАРК -->
+                <div class="info-block reveal">
+                    <h3 class="block-title"><i class="fas fa-car"></i> Автопарк</h3>
+                                        <div class="cars-grid">
+                        <div class="car-card">
+                            <img src="images/cars/priora.jpg" class="car-img" alt="Lada Priora">
+                            <div class="car-info">
+                                <span class="car-rank">Сержант</span>
+                                <h4>Lada Priora</h4>
+                            </div>
+                        </div>
+                        <div class="car-card">
+                            <img src="images/cars/patriot.jpg" class="car-img" alt="УАЗ Патриот">
+                            <div class="car-info">
+                                <span class="car-rank">Сержант</span>
+                                <h4>УАЗ Патриот</h4>
+                            </div>
+                        </div>
+                        <div class="car-card">
+                            <img src="images/cars/chev.jpg" class="car-img" alt="Chevrolet Cruze">
+                            <div class="car-info">
+                                <span class="car-rank">Старшина</span>
+                                <h4>Chevrolet Cruze</h4>
+                            </div>
+                        </div>
+                        <div class="car-card">
+                            <img src="images/cars/cam.jpg" class="car-img" alt="Toyota Camry">
+                            <div class="car-info">
+                                <span class="car-rank">Прапорщик</span>
+                                <h4>Toyota Camry</h4>
+                            </div>
+                        </div>
+                        <div class="car-card">
+                            <img src="images/cars/s8.jpg" class="car-img" alt="Audi S8 Plus">
+                            <div class="car-info">
+                                <span class="car-rank">Лейтенант</span>
+                                <h4>Audi S8 Plus</h4>
+                            </div>
+                        </div>
+                        <div class="car-card">
+                            <img src="images/cars/q7.jpg" class="car-img" alt="Audi Q7 TDI">
+                            <div class="car-info">
+                                <span class="car-rank">Ст. Лейтенант</span>
+                                <h4>Audi Q7 TDI</h4>
+                            </div>
+                        </div>
+                        <div class="car-card">
+                            <img src="images/cars/lc200.jpg" class="car-img" alt="Toyota Land Cruiser 200">
+                            <div class="car-info">
+                                <span class="car-rank">Руководство</span>
+                                <h4>Toyota Land Cruiser 200</h4>
+                            </div>
+                        </div>
+                        <div class="car-card">
+                            <img src="images/cars/ford.jpg" class="car-img" alt="Ford Transit">
+                            <div class="car-info">
+                                <span class="car-rank">Лейтенант</span>
+                                <h4>Ford Transit</h4>
+                                <small>Запрещено использовать в одиночку</small>
+                            </div>
+                        </div>
+                        <div class="car-card special">
+                            <img src="images/cars/mav.jpg" class="car-img" alt="Вертолёт Bell 206">
+                            <div class="car-info">
+                                <span class="car-rank">СОБР / СО / ИК / Рук-во</span>
+                                <h4>Вертолёт Bell 206</h4>
+                                <small>От звания Майор</small>
+                            </div>
+                        </div>
+                        <div class="car-card special">
+                            <img src="images/cars/paz.jpg" class="car-img" alt="ПАЗ Вектор Next">
+                            <div class="car-info">
+                                <span class="car-rank">Руководство</span>
+                                <h4>ПАЗ Вектор Next</h4>
+                                <small>Только при ЧС и мероприятиях</small>
+                            </div>
+                        </div>
+                        <div class="car-card special">
+                            <img src="images/cars/pol.jpg" class="car-img" alt="ГАЗель Бизнес">
+                            <div class="car-info">
+                                <span class="car-rank">СОБР / РС</span>
+                                <h4>ГАЗель Бизнес</h4>
+                                <small>При ЧС, отлове (от 4 чел.) и мероприятиях</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 5. ДОКУМЕНТАЦИЯ -->
+                <div class="info-block reveal">
+                    <h3 class="block-title"><i class="fas fa-book"></i> Уставная документация</h3>
+                    <p class="info-text">Все сотрудники обязаны помнить уставную документацию, непрерывно совершенствовать свои знания.<br><strong>Незнание закона не освобождает от ответственности!</strong></p>
+                    
+                    <div class="docs-grid">
+                        <a href="https://forum.gtaprovince.ru/topic/828538-konstituciya-respubliki-provinciya-prinyata-golosovaniem-15072024-goda/" target="_blank" class="doc-link">
+                            <i class="fas fa-file-alt"></i> Конституция РП (КРП)
+                        </a>
+                        <a href="https://forum.gtaprovince.ru/topic/724457-federalnyy-zakon-o-policii-ot-12112024-n-3-fz/" target="_blank" class="doc-link">
+                            <i class="fas fa-file-alt"></i> ФЗ «О полиции» (ФЗоП)
+                        </a>
+                        <a href="https://forum.gtaprovince.ru/topic/724456-federalnyy-zakon-o-voyskah-nacionalnoy-gvardii-ot-18112024-n-4-fz/" target="_blank" class="doc-link">
+                            <i class="fas fa-file-alt"></i> ФЗ «О нацгвардии» (ФЗоВНГ)
+                        </a>
+                        <a href="https://forum.gtaprovince.ru/topic/639258-ugolovnyy-kodeks-respubliki/" target="_blank" class="doc-link">
+                            <i class="fas fa-gavel"></i> Уголовный кодекс (УК РП)
+                        </a>
+                        <a href="https://forum.gtaprovince.ru/topic/639260-kodeks-ob-administrativnyh-pravonarusheniyah-respubliki/" target="_blank" class="doc-link">
+                            <i class="fas fa-gavel"></i> Кодекс об админ. нарушениях (КоАП)
+                        </a>
+                        <a href="https://forum.gtaprovince.ru/topic/639262-pravila-dorozhnogo-dvizheniya-respubliki/" target="_blank" class="doc-link">
+                            <i class="fas fa-car-side"></i> ПДД
+                        </a>
+                        <a href="https://forum.gtaprovince.ru/topic/991918-postanovlenie-o-razyasnenii-spornyh-momentov-i-situaciy-ot-01012024-n-1/" target="_blank" class="doc-link">
+                            <i class="fas fa-balance-scale"></i> Постановление Пленума №1
+                        </a>
+                        <a href="https://forum.gtaprovince.ru/topic/724432-polozhenie-o-sledstvennyh-podrazdeleniyah-mvd-ot-01082025-n-3/" target="_blank" class="doc-link">
+                            <i class="fas fa-search"></i> Положение о следствии
+                        </a>
+                        <a href="https://forum.gtaprovince.ru/topic/724445-prikazy-ministerstva-vnutrennih-del-po-respublike-provinciya/" target="_blank" class="doc-link">
+                            <i class="fas fa-scroll"></i> Приказы МВД
+                        </a>
+                    </div>
+                </div>
+            </section>
+<!-- ВПС -->
+<section id="vpsContent" class="tab-pane">
+    <div class="content-header reveal">
+        <h2><i class="fas fa-shield-halved"></i> Внутренние Правила Сервера</h2>
+    </div>
+
+    <div class="law-toolbar reveal">
+        <div class="law-search-box">
+            <i class="fas fa-search law-search-icon"></i>
+            <input type="text" id="vpsSearchInput" placeholder="Поиск по пункту, номеру или ключевому слову...">
+            <button class="law-clear-btn" id="vpsClearBtn" title="Очистить"><i class="fas fa-xmark"></i></button>
+        </div>
+        <div class="law-filters" id="vpsFilters">
+            <button class="law-filter-chip active" data-chapter="all">Все главы</button>
+            <button class="law-filter-chip" data-chapter="1">1. Основное</button>
+            <button class="law-filter-chip" data-chapter="2">2. Аккаунт</button>
+            <button class="law-filter-chip" data-chapter="3">3. Никнейм</button>
+            <button class="law-filter-chip" data-chapter="4">4. Администрация</button>
+            <button class="law-filter-chip" data-chapter="5">5. Чаты</button>
+            <button class="law-filter-chip" data-chapter="6">6. Игровой процесс</button>
+            <button class="law-filter-chip" data-chapter="7">7. ПДД</button>
+            <button class="law-filter-chip" data-chapter="8">8. Мошенничество</button>
+            <button class="law-filter-chip" data-chapter="9">9. Стороннее ПО</button>
+            <button class="law-filter-chip" data-chapter="10">10. Вне игры</button>
+            <button class="law-filter-chip" data-chapter="11">11. Дополнительные</button>
+        </div>
+    </div>
+
+    <div class="law-stats" id="vpsStats"></div>
+    <div class="law-results" id="vpsResults"></div>
+</section>
+<!-- ЗАКОНОДАТЕЛЬСТВО -->
+<section id="lawContent" class="tab-pane">
+    <div class="content-header reveal">
+        <h2><i class="fas fa-gavel"></i> Законодательство</h2>
+    </div>
+
+    <div class="law-toolbar reveal">
+        <div class="law-search-box">
+            <i class="fas fa-search law-search-icon"></i>
+            <input type="text" id="lawSearchInput" placeholder="Поиск по статье, номеру или ключевому слову...">
+            <button class="law-clear-btn" id="lawClearBtn" title="Очистить"><i class="fas fa-xmark"></i></button>
+        </div>
+        <div class="law-filters" id="lawFilters">
+            <button class="law-filter-chip active" data-code="uk">УК РП</button>
+            <button class="law-filter-chip" data-code="koap">КоАП</button>
+            <button class="law-filter-chip" data-code="fzop">ФЗоП</button>
+            <button class="law-filter-chip" data-code="fzvng">ФЗоВНГ</button>
+            <button class="law-filter-chip" data-code="opsgo">ОПСГО</button>
+            <button class="law-filter-chip" data-code="pdd">ПДД</button>
+        </div>
+    </div>
+
+    <div class="law-stats" id="lawStats"></div>
+
+    <div class="law-results" id="lawResults"></div>
+</section>
+
+            <!-- UPDATES -->
+            <section id="updatesContent" class="tab-pane">
+                <div class="content-header reveal">
+                    <h2><i class="fas fa-newspaper"></i> Обновления сайта</h2>
+                </div>
+                <div class="updates-intro reveal"><i class="fas fa-info-circle"></i><span>Здесь публикуются все изменения и улучшения портала. Следите за обновлениями!</span></div>
+                <div class="updates-timeline">
+                    <article class="update-card latest reveal">
+                        <div class="update-header">
+                            <div class="update-version-badge">v3.0</div>
+                            <div class="update-meta">
+                                <div class="update-title">Полный редизайн + картинки + анимации</div>
+                                <div class="update-date"><i class="far fa-calendar"></i> 30 октября 2026</div>
+                            </div>
+                            <span class="update-tag new">NEW</span>
+                        </div>
+                        <ul class="update-list">
+                            <li>Новая структура проекта — css / js / images по папкам</li>
+                            <li>Hero-баннер с фоновой картинкой и частицами</li>
+                            <li>Карточки разделов с превью-картинками</li>
+                            <li>Плавные анимации появления при скролле</li>
+                            <li>Preloader и шрифты Manrope + JetBrains Mono</li>
+                            <li>Sticky-хедер с подсветкой активного раздела</li>
+                        </ul>
+                    </article>
+                    <article class="update-card reveal">
+                        <div class="update-header">
+                            <div class="update-version-badge">v2.0</div>
+                            <div class="update-meta">
+                                <div class="update-title">Новый визуальный стиль</div>
+                                <div class="update-date"><i class="far fa-calendar"></i> 20 октября 2026</div>
+                            </div>
+                            <span class="update-tag fix">FIX</span>
+                        </div>
+                        <ul class="update-list">
+                            <li>Обновлена палитра и типографика</li>
+                            <li>Добавлена кнопка копирования биндов</li>
+                            <li>Улучшены hover-эффекты и анимации</li>
+                        </ul>
+                    </article>
+                    <article class="update-card reveal">
+                        <div class="update-header">
+                            <div class="update-version-badge">v1.0</div>
+                            <div class="update-meta">
+                                <div class="update-title">Запуск портала</div>
+                                <div class="update-date"><i class="far fa-calendar"></i> 1 октября 2026</div>
+                            </div>
+                        </div>
+                        <ul class="update-list">
+                            <li>Раздел «Бинды» для 4 отделов</li>
+                            <li>Раздел «Первая доврачебная помощь»</li>
+                            <li>Информационный стенд</li>
+                            <li>Автоподстановка личных данных</li>
+                        </ul>
+                    </article>
+                </div>
+                <div class="vk-card reveal">
+                    <div class="vk-card-icon"><i class="fab fa-vk"></i></div>
+                    <div class="vk-card-body">
+                        <h3>Есть предложение по улучшению сайта?</h3>
+                        <p>Нашёл ошибку, придумал новую функцию или просто хочешь поделиться идеей — обращайся к разработчику!</p>
+                    </div>
+                    <a href="https://vk.ru/elkapulkaaaa" target="_blank" rel="noopener noreferrer" class="vk-big-btn"><i class="fab fa-vk"></i> Написать разработчику</a>
+                </div>
+            </section>
+
+        </div>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="site-footer">
+        <div class="footer-content">
+            <p>© 2026 ОМВД-П. Все права защищены.</p>
+            <p>Сайт является исключительно для сотрудников 1 сервера ОМВД-П</p>
+            <p>Разработчик сайта: Ellie_Parker</p>
+            <div class="footer-links">
+                <a href="https://vk.ru/elkapulkaaaa" target="_blank" rel="noopener noreferrer" class="footer-vk-btn"><i class="fab fa-vk"></i> Связь для ошибок или предложений</a>
+            </div>
+        </div>
+    </footer>
+
+    <div class="notification" id="copyNotification"><i class="fas fa-check-circle"></i><span id="notificationText">Скопировано</span></div>
+    <button class="scroll-top" id="scrollTop" aria-label="Наверх"><i class="fas fa-arrow-up"></i></button>
+
+    <script src="js/law-data.js"></script>
+    <script src="js/vps-data.js"></script>
+<script src="js/app.js"></script>
+</body>
+</html>
